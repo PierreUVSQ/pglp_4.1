@@ -3,6 +3,9 @@ package uvsq;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,5 +48,15 @@ public class AppTest
     	assertEquals("12345678", p.getTel().get(1));
     }
     
+    
+    @Test
+    public void testPersonneDate() {
+    	
+    	LocalDate t = LocalDate.now();
+    	List<String> tmp = new ArrayList<>();
+    	Personnel p = new Personnel.Builder("Smith", "John", "ComputerScienist").UpdateDateNaissance(t).build();
+    	
+    	assertEquals(LocalDate.now(), p.getLocalDate());
+    }
     
 }

@@ -1,5 +1,6 @@
 package uvsq;
 
+import java.util.Collections;
 import java.util.List;
 
 public final class Personnel {
@@ -34,6 +35,12 @@ public final class Personnel {
 			return this;
 		}
 		
+		public Builder UpdateDateNaissance(java.time.LocalDate t) {
+			
+			this.dateNaissance = t;
+			
+			return this;
+		}
 		
 		public Personnel build() {
 			
@@ -64,8 +71,12 @@ public final class Personnel {
 	
 	public List<String> getTel(){
 		
-		return this.telephone;
+		return Collections.unmodifiableList(this.telephone);
 		
 	}
 	
+	public java.time.LocalDate getLocalDate(){
+		
+		return this.dateNaissance;
+	}
 }
