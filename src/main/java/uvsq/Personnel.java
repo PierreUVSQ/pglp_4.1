@@ -34,6 +34,7 @@ public final class Personnel {
 			return this;
 		}
 		
+		
 		public Personnel build() {
 			
 			return new Personnel(this);
@@ -61,6 +62,10 @@ public final class Personnel {
 		
 	}
 	
-	
+	public List<String> getTel(){
+		
+		return this.telephone;
+		
+	}
 	
 }
