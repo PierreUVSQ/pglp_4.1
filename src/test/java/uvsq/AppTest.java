@@ -1,5 +1,6 @@
 package uvsq;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -17,4 +18,14 @@ public class AppTest
     {
         assertTrue( true );
     }
+    
+    @Test
+    public void testPersonnel() {
+    	
+    	Personnel p = new Personnel.Builder("Smith", "John", "ComputerScienist").build();
+    	
+    	assertEquals("Smith", p.getNom());
+    	
+    }
+    
 }
