@@ -3,7 +3,7 @@ package uvsq;
 import java.util.Collections;
 import java.util.List;
 
-public final class Personnel {
+public final class Personnel extends Equipe {
 
 	
 	private final String nom;
