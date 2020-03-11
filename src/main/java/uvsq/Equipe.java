@@ -1,5 +1,10 @@
 package uvsq;
 
-public abstract class Equipe {
 
+public abstract class Equipe{
+
+	
+	
+	
+	
 }

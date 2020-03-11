@@ -5,9 +5,12 @@ import java.util.List;
 public class Annuaire {
 
 	private static Annuaire ANNUAIRE;
-	public List<Equipe> annuaire; 
+	public List<Equipe> hierarchie; 
 	
 	private Annuaire() {
+		
+		
+		
 		
 	}
 	
@@ -18,6 +21,6 @@ public class Annuaire {
 		
 		return ANNUAIRE;
 	}
-	
+
 	
 }
