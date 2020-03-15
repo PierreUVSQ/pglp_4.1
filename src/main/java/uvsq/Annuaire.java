@@ -10,7 +10,7 @@ public class Annuaire implements Iterable<Equipe> {
 	private EquipeIterator<Equipe> head; //tête de l'itérateur
 	
 	/**
-	 * Constructeur privé
+	 * Constructeur privé.
 	 */
 	private Annuaire() {
 		head = new EquipeIterator<Equipe>();
@@ -18,7 +18,7 @@ public class Annuaire implements Iterable<Equipe> {
 	}
 	
 	/**
-	 * Getter du singleton
+	 * Getter du singleton.
 	 * @return
 	 */
 	public static Annuaire getInstance() {
@@ -36,7 +36,7 @@ public class Annuaire implements Iterable<Equipe> {
 	}
 
 	/**
-	 * Ajout d'une équipe
+	 * Ajout d'une équipe.
 	 * @param e
 	 */
 	public void addEquipe(Equipe e) {

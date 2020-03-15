@@ -8,7 +8,7 @@ public class Node<T> {
 	
 	
 	/**
-	 * Constructor
+	 * Constructor.
 	 * @param element
 	 */
 	public Node(T element){
@@ -17,7 +17,7 @@ public class Node<T> {
 		
 	}
 	/**
-	 * Ajoute élément récursivement
+	 * Ajoute élément récursivement.
 	 * @param suivant
 	 */
 	public void addElement(T suivant) {
@@ -33,7 +33,7 @@ public class Node<T> {
 	}
 	
 	/**
-	 * Getter
+	 * Getter.
 	 * @return élément courant
 	 */
 	public T getElement() {
@@ -43,7 +43,7 @@ public class Node<T> {
 	
 	/**
 	 * 
-	 * Efface l'élément courant
+	 * Efface l'élément courant.
 	 */
 	public void remove() {
 		
@@ -53,8 +53,9 @@ public class Node<T> {
 		this.suivant = null;
 		this.precedent = null;
 	}
+	
 	/**
-	 * Indique s'l y a u élément suivant
+	 * Indique s'l y a un élément suivant.
 	 * @return boolean
 	 */
 	public boolean hasNext() {
@@ -62,16 +63,18 @@ public class Node<T> {
 		if (this.suivant != null) return true;
 		else return false;
 	}
+	
 	/**
-	 * Getter
+	 * Getter.
 	 * @return
 	 */
 	public Node<T> getNext() {
 		
 		return this.suivant;
 	}
+	
 	/**
-	 * Getter
+	 * Getter.
 	 * @return
 	 */
 	public Node<T> getPrevious() {

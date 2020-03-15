@@ -39,7 +39,7 @@ public class AppTest
     	List<String> tmp = new ArrayList<>();
     	tmp.add(tel);
     	tmp.add("12345678");
-    	Personnel p = new Personnel.Builder("Smith", "John", "ComputerScienist").UpdatePhoneList(tmp).build();
+    	Personnel p = new Personnel.Builder("Smith", "John", "ComputerScienist").updatePhoneList(tmp).build();
     	
     	assertEquals("Smith", p.getNom());
     	assertEquals("00000000", p.getTel().get(0));
@@ -52,7 +52,7 @@ public class AppTest
     	
     	LocalDate t = LocalDate.now();
     	List<String> tmp = new ArrayList<>();
-    	Personnel p = new Personnel.Builder("Smith", "John", "ComputerScienist").UpdateDateNaissance(t).build();
+    	Personnel p = new Personnel.Builder("Smith", "John", "ComputerScienist").updateDateNaissance(t).build();
     	
     	assertEquals(LocalDate.now(), p.getLocalDate());
     }
@@ -66,7 +66,7 @@ public class AppTest
     	List<String> tmp = new ArrayList<>();
     	tmp.add(tel);
     	tmp.add("12345678");
-    	Personnel p = new Personnel.Builder("Smith", "John", "ComputerScienist").UpdatePhoneList(tmp).build();
+    	Personnel p = new Personnel.Builder("Smith", "John", "ComputerScienist").updatePhoneList(tmp).build();
     	
     	a.addEquipe(p);
     	a.addEquipe(new Groupe("Groupe1"));
@@ -95,7 +95,7 @@ public class AppTest
     	List<String> tmp = new ArrayList<>();
     	tmp.add(tel);
     	tmp.add("12345678");
-    	Personnel p = new Personnel.Builder("Smith", "John", "ComputerScienist").UpdatePhoneList(tmp).build();
+    	Personnel p = new Personnel.Builder("Smith", "John", "ComputerScienist").updatePhoneList(tmp).build();
     	Node<Equipe> one = new Node<Equipe>(p);
     	one.addElement(new Groupe("g1"));
     	one.addElement(p);
@@ -121,7 +121,7 @@ public class AppTest
     	List<String> tmp = new ArrayList<>();
     	tmp.add(tel);
     	tmp.add("12345678");
-    	Personnel p = new Personnel.Builder("Smith", "John", "ComputerScienist").UpdatePhoneList(tmp).build();
+    	Personnel p = new Personnel.Builder("Smith", "John", "ComputerScienist").updatePhoneList(tmp).build();
     	
     	g.ajoutMembre(p);
     	g.ajoutMembre(new Groupe("g2"));
@@ -143,8 +143,8 @@ public class AppTest
     	List<String> tmp = new ArrayList<>();
     	tmp.add(tel);
     	tmp.add("12345678");
-    	Personnel p1 = new Personnel.Builder("Smith", "John", "ComputerScienist").UpdatePhoneList(tmp).build();
-    	Personnel p2 = new Personnel.Builder("pg", "lp", "class").UpdatePhoneList(tmp).build();
+    	Personnel p1 = new Personnel.Builder("Smith", "John", "ComputerScienist").updatePhoneList(tmp).build();
+    	Personnel p2 = new Personnel.Builder("pg", "lp", "class").updatePhoneList(tmp).build();
     	
     	gg.ajoutMembre(p1);
     	gg.ajoutMembre(p2);

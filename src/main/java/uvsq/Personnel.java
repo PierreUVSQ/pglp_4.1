@@ -28,14 +28,14 @@ public final class Personnel extends Equipe {
 			
 		}
 		
-		public Builder UpdatePhoneList(List<String> phone) {
+		public Builder updatePhoneList(List<String> phone) {
 			
 			this.telephone = phone;
 			
 			return this;
 		}
 		
-		public Builder UpdateDateNaissance(java.time.LocalDate t) {
+		public Builder updateDateNaissance(java.time.LocalDate t) {
 			
 			this.dateNaissance = t;
 			
