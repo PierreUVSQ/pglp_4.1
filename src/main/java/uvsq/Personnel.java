@@ -5,8 +5,7 @@ import java.util.List;
 
 public final class Personnel extends Equipe {
 
-	private Personnel next;
-	
+
 	private final String nom;
 	private final String prenom;
 	private final String fonction;
@@ -86,11 +85,4 @@ public final class Personnel extends Equipe {
 		System.out.println(this.nom);
 	}
 
-	//public void setNext()
-	
-	@Override
-	public Equipe getNext() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

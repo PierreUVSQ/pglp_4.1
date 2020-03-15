@@ -3,7 +3,7 @@ package uvsq;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Groupe extends Equipe{
+public class Groupe extends Equipe implements Iterable<Equipe>{
 
 	private final String nom;
 	private Groupe next;
@@ -30,12 +30,5 @@ public class Groupe extends Equipe{
 		System.out.println(this.nom);
 	}
 
-	public void setNext(Groupe g) {
-		this.next = g;
-	}
-	@Override
-	public Equipe getNext() {
-		return next;
-	}
-	
+
 }
