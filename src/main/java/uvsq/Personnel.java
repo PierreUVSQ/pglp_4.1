@@ -5,6 +5,7 @@ import java.util.List;
 
 public final class Personnel extends Equipe {
 
+	private Personnel next;
 	
 	private final String nom;
 	private final String prenom;
@@ -78,5 +79,18 @@ public final class Personnel extends Equipe {
 	public java.time.LocalDate getLocalDate(){
 		
 		return this.dateNaissance;
+	}
+	
+
+	public void printNom() {
+		System.out.println(this.nom);
+	}
+
+	//public void setNext()
+	
+	@Override
+	public Equipe getNext() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
