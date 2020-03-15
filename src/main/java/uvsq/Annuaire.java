@@ -8,9 +8,8 @@ public class Annuaire implements Iterable<Equipe> {
 
 	private static Annuaire ANNUAIRE;
 	private EquipeIterator<Equipe> head;
-	private EquipeIterator<Equipe> tail;
 	private Annuaire() {
-		
+		head = new EquipeIterator<Equipe>();
 		
 	}
 	
@@ -24,27 +23,15 @@ public class Annuaire implements Iterable<Equipe> {
 
 	@Override
 	public Iterator<Equipe> iterator() {
-		// TODO Auto-generated method stub
+
 		return this.head;
 	}
 
 	
 	public void addEquipe(Equipe e) {
+
+		this.head.add(e);
 		
-		if(this.head == null) {
-			this.head = new EquipeIterator<Equipe>();
-			this.head.add(e);
-		}
-		else if(this.tail == null) {
-			
-			this.head.add(e);
-			this.tail = this.head.getNext();
-		}
-		else {
-			
-			this.tail.add(e);
-			this.tail = this.tail.getNext();
-		}
 	}
 	
 	

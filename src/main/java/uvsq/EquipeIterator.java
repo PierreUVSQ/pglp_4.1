@@ -5,12 +5,10 @@ import java.util.Iterator;
 public class EquipeIterator<Equipe> implements Iterator<Equipe>{
 
 	private int index;
-	private Equipe e;
-	private EquipeIterator<Equipe>previous = null;
-	private EquipeIterator<Equipe> next= null;
+	private Node<Equipe> e;
 	@Override
 	public boolean hasNext() {
-		if(next != null) {
+		if(e != null) {
 			return true;
 			
 		}
@@ -19,35 +17,24 @@ public class EquipeIterator<Equipe> implements Iterator<Equipe>{
 
 	@Override
 	public Equipe next() {
-		System.out.println("here");
+		Equipe tmp = e.getElement();
+		e = e.getNext();
 		index ++;
-		return next.e;
+		return tmp;
 	}
 
 
 	public void add(Equipe n) {
 		
-		System.out.println("adding");
-		if(e == null)
-			this.e = n;
+		
+		if(e == null) {
+			this.e = new Node<Equipe>(n);
+		}
 		else {
 			
-			next = new EquipeIterator<Equipe>();
-			next.previous = this;
-			next.e = n;
+			this.e.addElement(n);
+
 		}
-	}
-	
-	public EquipeIterator<Equipe> getNext(){
-		
-		return next;
-		
-	}
-
-	public EquipeIterator<Equipe> getPrevious(){
-
-		return this.previous;
-
 	}
 	
 

@@ -2,16 +2,24 @@ package uvsq;
 
 public class Node<T> {
 
-	private Node<T> precedent = null;
-	private Node<T> suivant = null;
-	private T element;
+	private Node<T> precedent = null; // noeud précedent
+	private Node<T> suivant = null; //noeud suivant
+	private T element;              //élément du noeud courant
 	
+	
+	/**
+	 * Constructor
+	 * @param element
+	 */
 	public Node(T element){
 		
 		this.element = element;
 		
 	}
-	
+	/**
+	 * Ajoute élément récursivement
+	 * @param suivant
+	 */
 	public void addElement(T suivant) {
 		
 		if (this.suivant == null) {
@@ -24,11 +32,19 @@ public class Node<T> {
 		
 	}
 	
+	/**
+	 * Getter
+	 * @return élément courant
+	 */
 	public T getElement() {
 		
 		return this.element;
 	}
 	
+	/**
+	 * 
+	 * Efface l'élément courant
+	 */
 	public void remove() {
 		
 		this.precedent.suivant = this.suivant;
@@ -37,16 +53,29 @@ public class Node<T> {
 		this.suivant = null;
 		this.precedent = null;
 	}
-	
+	/**
+	 * Indique s'l y a u élément suivant
+	 * @return boolean
+	 */
 	public boolean hasNext() {
 		
 		if (this.suivant != null) return true;
 		else return false;
 	}
-	
+	/**
+	 * Getter
+	 * @return
+	 */
 	public Node<T> getNext() {
 		
 		return this.suivant;
 	}
-	
+	/**
+	 * Getter
+	 * @return
+	 */
+	public Node<T> getPrevious() {
+		
+		return this.precedent;
+	}
 }

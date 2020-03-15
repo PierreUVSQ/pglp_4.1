@@ -4,10 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Month;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import org.junit.Test;
@@ -75,8 +72,8 @@ public class AppTest
     	a.addEquipe(new Groupe("Groupe1"));
     	a.addEquipe(new Groupe("Groupe2"));
     	a.addEquipe(new Groupe("Groupe3"));
+    	a.addEquipe(new Groupe("Groupe4"));
     	System.out.println("Start");
-    	//Iterator<Equipe> ee = a.iterator();
     	
     	for(Equipe e : a) {
     		

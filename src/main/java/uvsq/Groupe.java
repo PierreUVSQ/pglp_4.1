@@ -35,7 +35,6 @@ public class Groupe extends Equipe{
 	}
 	@Override
 	public Equipe getNext() {
-		// TODO Auto-generated method stub
 		return next;
 	}
 	
