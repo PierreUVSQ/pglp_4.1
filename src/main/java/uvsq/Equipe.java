@@ -1,8 +1,6 @@
 package uvsq;
 
 public abstract class Equipe {
-	
 
-	public abstract void printNom();
-	
+  public abstract void printNom();
 }
